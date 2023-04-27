@@ -21,7 +21,7 @@ int infinite_while(void)
  *
  * Return: (Always 0)
  */
-int main()
+int main(void)
 {
 	int i;
 	pid_t child_pid;
@@ -35,7 +35,8 @@ int main()
 		}
 		else
 		{
-			printf("Zoombie process created, PID: %u\n", child_pid);
+			printf("Zoombie process created, PID: %u\n",
+				child_pid);
 		}
 	}
 	infinite_while();
