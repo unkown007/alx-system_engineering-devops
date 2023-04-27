@@ -4,7 +4,7 @@
 if [ "$#" -ne "1" ]
 then
 	echo "Usage: manage_my_process {start|stop|restart}"
-	exit 0
+	exit
 fi
 
 if [ "$1" == "start" ]
