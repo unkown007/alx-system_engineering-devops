@@ -1,7 +1,8 @@
 # configure a new web server
 
 exec { 'apt-get -y update && apt-get -y install nginx':
-    path => '/usr/bin:/bin:/usr/sbin/service'
+    path => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    user => 'root'
 }
 
 file_line { 'redirect_me':
@@ -29,5 +30,6 @@ file { '/var/www/html/404.html':
 }
 
 exec { 'service nginx restart':
-    path => '/usr/bin:/bin:/usr/sbin/service'
+    path => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    user => 'root'
 }
