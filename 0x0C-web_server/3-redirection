@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # configures nginx server so that /redirect_me is redirecting to another page
 lines="server_name globalvm.tech\/redirect_me;\n\treturn 301 https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;\n"
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Hello World!" | sudo tee -a /var/www/html/index.html > /dev/null
 sed -i "s/server_name _;/$lines/" /etc/nginx/sites-available/default
 service nginx restart
