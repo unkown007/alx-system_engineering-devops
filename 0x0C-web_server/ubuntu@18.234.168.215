@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# configures nginx server so that /redirect_me is redirecting to another page
-lines="server_name globalvm.tech\/redirect_me;\n\treturn 301 https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;\n"
-sed -i "s/server_name _;/$lines/" /etc/nginx/sites-available/default
-service nginx restart
