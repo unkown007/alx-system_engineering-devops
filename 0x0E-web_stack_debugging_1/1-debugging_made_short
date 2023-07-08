@@ -2,3 +2,4 @@
 # ensuring Ngnix installation listen on port 80
 sed -i -e "s/\/etc\/nginx\/sites-enabled\/\*/\/etc\/nginx\/sites-available\/\*/" /etc/nginx/nginx.conf
 service nginx restart
+kill -9 "$(cat /var/run/nginx.pid)"
