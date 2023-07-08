@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # ensuring Ngnix installation listen on port 80
+service nginx stop
 sed -i -e "s/\/etc\/nginx\/sites-enabled\/\*/\/etc\/nginx\/sites-available\/\*/" /etc/nginx/nginx.conf
-service nginx reload
+service nginx start
