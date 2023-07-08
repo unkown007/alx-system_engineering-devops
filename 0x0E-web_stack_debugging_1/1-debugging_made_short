@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # ensuring Ngnix installation listen on port 80
-sed -i -e "s/\/etc\/nginx\/sites-enabled\/\*/\/etc\/nginx\/sites-available\/\*/" /etc/nginx/nginx.conf
+sed -i -e "s/8080/80/g" /etc/nginx/sites-enabled/default
 service nginx reload
 kill -9 "$(cat /var/run/nginx.pid)"
