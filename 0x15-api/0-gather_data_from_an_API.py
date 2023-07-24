@@ -21,4 +21,4 @@ if __name__ == "__main__":
                 user_details["name"], total_done, total))
     for task in user_todos:
         if task["completed"]:
-            print('\t{}'.format(task["title"]))
+            print('\t {}'.format(task["title"]))
