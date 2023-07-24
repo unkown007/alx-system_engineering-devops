@@ -18,6 +18,6 @@ if __name__ == "__main__":
         for task in user_todos:
             spamwriter.writerow([
                 user_details["id"],
-                user_details["name"],
+                user_details["username"],
                 task["completed"],
                 task["title"]])
