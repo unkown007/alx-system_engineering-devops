@@ -5,6 +5,6 @@ exec { 'change os configuration':
                 'NEW=hard nofile 50000',
                 'OLD2=soft nofile 4',
                 'NEW2=soft nofile 40000'],
-  command    => 'sudo sed -i "s/$OLD/$NEW/" $DIR; sudo sed -i "s/$OLD2/$NEW2" $DIR',
-  path       => ['/usr/bin/', '/bin']
+  command     => 'sudo sed -i "s/$OLD/$NEW/" $DIR; sudo sed -i "s/$OLD2/$NEW2" $DIR',
+  path        => ['/usr/bin/', '/bin']
 }
