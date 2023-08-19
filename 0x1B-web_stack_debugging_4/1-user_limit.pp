@@ -1,6 +1,6 @@
 # Increase limit of open files per user
 exec { 'change os configuration':
-  enviroment => ['DIR=/etc/security/limits.conf',
+  environment => ['DIR=/etc/security/limits.conf',
                 'OLD=hard nofile 5',
                 'NEW=hard nofile 50000',
                 'OLD2=soft nofile 4',
